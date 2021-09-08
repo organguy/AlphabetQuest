@@ -37,13 +37,38 @@ class QuestActivity : AppCompatActivity() {
 
         if(step == 1){
             wordArr = resources.getStringArray(R.array.word_list_step_1)
-        }
 
-        for(word in wordArr!!){
-            var wordData = WordData()
-            wordData.word = word
+            for(word in wordArr!!){
+                var wordData = WordData()
+                wordData.word = word
 
-            wordList.add(wordData)
+                wordList.add(wordData)
+            }
+        }else if(step == 2){
+            wordArr = resources.getStringArray(R.array.word_list_step_1)
+
+            for(word in wordArr!!){
+                var wordData = WordData()
+                wordData.word = word.lowercase(Locale.getDefault())
+                wordList.add(wordData)
+            }
+        }else if(step == 3){
+            wordArr = resources.getStringArray(R.array.word_list_step_1)
+
+            for(word in wordArr!!){
+                val random = Random()
+                var randomNum = random.nextInt(2)
+
+                var wordData = WordData()
+
+                if(randomNum == 0){
+                    wordData.word = word.lowercase(Locale.getDefault())
+                }else{
+                    wordData.word = word
+                }
+
+                wordList.add(wordData)
+            }
         }
     }
 

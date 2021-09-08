@@ -14,10 +14,30 @@
         android:id="@+id/bt_step_1"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="1단계"
+        android:text="1단계 - 대문자"
         android:textSize="20dp"
         android:onClick="gotoStep"
         android:tag="1"
+        />
+
+    <Button
+        android:id="@+id/bt_step_2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="2단계 - 소문자"
+        android:textSize="20dp"
+        android:onClick="gotoStep"
+        android:tag="2"
+        />
+
+    <Button
+        android:id="@+id/bt_step_3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="3단계 - 대소문자"
+        android:textSize="20dp"
+        android:onClick="gotoStep"
+        android:tag="3"
         />
 
 </LinearLayout>
